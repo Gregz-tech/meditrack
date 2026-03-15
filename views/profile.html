@@ -1,0 +1,74 @@
+<div class="container py-4 mb-5 view-enter">
+    
+    <div class="row mb-4 align-items-center mt-2">
+        <div class="col-12 d-flex align-items-center gap-3">
+            <a href="#/dashboard" class="btn btn-light rounded-circle p-2 shadow-sm text-dark">
+                <i class="bi bi-arrow-left fs-5"></i>
+            </a>
+            <div>
+                <h3 class="fw-bold mb-0">My Profile</h3>
+                <p class="text-muted small mb-0">Your account and university details</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            
+            <div class="mt-card border-0 shadow-lg p-4 text-center mb-4">
+                <div class="position-relative d-inline-block mb-3">
+                    <img id="profile_avatar" src="https://ui-avatars.com/api/?name=User&background=1FA971&color=fff" 
+                         alt="Avatar" class="rounded-circle border border-4 border-white shadow-sm" width="100">
+                    <span class="position-absolute bottom-0 end-0 bg-success border border-2 border-white rounded-circle p-2" title="Account Active"></span>
+                </div>
+                <h4 class="fw-bold text-dark mb-1" id="profile_name">Full Name</h4>
+                <p class="badge bg-success bg-opacity-10 text-success rounded-pill px-3" id="profile_role">Role</p>
+            </div>
+
+            <div class="mt-card border-0 shadow-sm p-4">
+                <h6 class="text-uppercase fw-bold text-muted small mb-4 tracking-wider">Information Technology & Health Informatics Details</h6>
+                
+                <div class="mb-3 d-flex align-items-center">
+                    <div class="bg-light p-2 rounded-3 me-3">
+                        <i class="bi bi-envelope text-primary"></i>
+                    </div>
+                    <div>
+                        <p class="text-muted smallest mb-0">Email Address</p>
+                        <p class="fw-bold mb-0" id="profile_email">example@fuhsi.edu.ng</p>
+                    </div>
+                </div>
+
+                <div class="mb-3 d-flex align-items-center">
+                    <div class="bg-light p-2 rounded-3 me-3">
+                        <i class="bi bi-hash text-primary"></i>
+                    </div>
+                    <div>
+                        <p class="text-muted smallest mb-0" id="id_label">Matric / Staff ID</p>
+                        <p class="fw-bold mb-0" id="profile_id">---</p>
+                    </div>
+                </div>
+
+                <div class="mb-4 d-flex align-items-center">
+                    <div class="bg-light p-2 rounded-3 me-3">
+                        <i class="bi bi-building text-primary"></i>
+                    </div>
+                    <div>
+                        <p class="text-muted smallest mb-0">Department / Unit</p>
+                        <p class="fw-bold mb-0" id="profile_dept">---</p>
+                    </div>
+                </div>
+
+                <hr class="opacity-10 mb-4">
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-secondary border-2 fw-bold" disabled>
+                        <i class="bi bi-shield-lock me-2"></i> Change Password
+                    </button>
+                    <button class="btn btn-outline-danger border-0 fw-bold mt-2" onclick="document.getElementById('btn-logout').click()">
+                        <i class="bi bi-box-arrow-right me-2"></i> Log Out
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

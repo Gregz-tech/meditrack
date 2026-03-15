@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+:root {
+    /* Meditrack Core Colors */
+    --primary-green: #1FA971;
+    --secondary-green: #39C98A;
+    --support-blue: #3A86FF;
+    --bg-light: #F6F9FB;
+    --text-dark: #1A1A1A;
+    --text-muted: #6B7280;
+    
+    /* UI Elements */
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .brand-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Modern Card Design (Appealing for Students) */
+.mt-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.mt-card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(31, 169, 113, 0.15);
+    border-color: var(--secondary-green);
+}
+
+/* Custom Buttons */
+.btn-primary-mt {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary-mt:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(31, 169, 113, 0.3);
+    color: white;
+}
+
+/* Gradient Text for Headings */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-green), var(--support-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* SPA View Transition Animation */
+.view-enter {
+    animation: fadeUp 0.4s ease forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

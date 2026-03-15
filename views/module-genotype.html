@@ -1,0 +1,78 @@
+<div class="container py-4 mb-5 view-enter">
+    
+    <div class="row mb-4 align-items-center mt-2">
+        <div class="col-12 d-flex align-items-center gap-3">
+            <a href="#/dashboard" class="btn btn-light rounded-circle p-2 shadow-sm text-dark hover-bg-light">
+                <i class="bi bi-arrow-left fs-5"></i>
+            </a>
+            <div>
+                <h3 class="fw-bold mb-0">Genotype Compatibility</h3>
+                <p class="text-muted small mb-0">Understand your genetic pairing risks</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5 mb-4">
+            <div class="mt-card border-0 shadow-sm p-4 h-100 position-relative">
+                <div class="position-absolute top-0 start-0 w-100 bg-success" style="height: 5px; border-radius: 20px 20px 0 0;"></div>
+                
+                <h5 class="fw-bold mb-4"><i class="bi bi-droplet-half text-success me-2"></i> Select Genotypes</h5>
+                
+                <form id="form_genotype_check">
+                    <div class="form-floating mb-4">
+                        <select class="form-select border-0 shadow-sm bg-light" id="user_genotype" required>
+                            <option value="" selected disabled>Select your genotype...</option>
+                            <option value="AA">AA</option>
+                            <option value="AS">AS</option>
+                            <option value="SS">SS</option>
+                            <option value="AC">AC</option>
+                        </select>
+                        <label for="user_genotype" class="fw-bold text-muted">Your Genotype</label>
+                    </div>
+
+                    <div class="form-floating mb-5">
+                        <select class="form-select border-0 shadow-sm bg-light" id="partner_genotype" required>
+                            <option value="" selected disabled>Select partner's genotype...</option>
+                            <option value="AA">AA</option>
+                            <option value="AS">AS</option>
+                            <option value="SS">SS</option>
+                            <option value="AC">AC</option>
+                        </select>
+                        <label for="partner_genotype" class="fw-bold text-muted">Partner's Genotype</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100 py-3 fs-5 fw-bold shadow-sm" style="border-radius: 12px;">
+                        Check Compatibility
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-5">
+            <div class="mt-card border-0 shadow-sm p-4 h-100 d-flex flex-column justify-content-center text-center text-muted" id="geno_result_empty">
+                <i class="bi bi-shield-check display-1 opacity-25 mb-3"></i>
+                <h5 class="fw-bold">Awaiting Input</h5>
+                <p class="small">Select both genotypes to view the compatibility report and medical advice.</p>
+            </div>
+
+            <div class="mt-card border-0 shadow-lg p-4 h-100 text-center d-none" id="geno_result_card">
+                <p class="text-muted fw-bold text-uppercase tracking-wide mb-2">Pairing Result</p>
+                <h2 class="fw-bolder mb-0" id="geno_pairing_display">AA + AS</h2>
+                
+                <div class="my-4">
+                    <span class="badge rounded-pill px-4 py-2 fs-6 mb-3" id="geno_status_badge">Compatible</span>
+                    <div class="p-3 rounded-3 bg-light mt-2 text-start">
+                        <p class="text-dark fw-medium mb-0 small" id="geno_advice_text">Medical advice will appear here based on standard hematology guidelines.</p>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <button class="btn btn-outline-secondary w-100 fw-bold border-2" id="btn_save_genotype">
+                        <i class="bi bi-cloud-arrow-up me-2"></i> Save to History
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="container py-4 mb-5 view-enter">
+    
+    <div class="row mb-4 align-items-center mt-2">
+        <div class="col-12 d-flex align-items-center gap-3">
+            <a href="#/dashboard" class="btn btn-light rounded-circle p-2 shadow-sm text-dark hover-bg-light">
+                <i class="bi bi-arrow-left fs-5"></i>
+            </a>
+            <div>
+                <h3 class="fw-bold mb-0">Mental Wellness</h3>
+                <p class="text-muted small mb-0">Your daily campus check-in</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5 mb-4">
+            <div class="mt-card border-0 shadow-sm p-4 h-100 position-relative">
+                <div class="position-absolute top-0 start-0 w-100 bg-warning" style="height: 5px; border-radius: 20px 20px 0 0;"></div>
+                
+                <h5 class="fw-bold mb-4"><i class="bi bi-emoji-smile text-warning me-2"></i> How are you feeling?</h5>
+                
+                <form id="form_wellness_check">
+                    
+                    <div class="mb-4">
+                        <label for="well_sleep" class="form-label d-flex justify-content-between text-muted fw-bold small">
+                            <span><i class="bi bi-moon-stars me-1"></i> Sleep Quality</span>
+                            <span id="val_sleep" class="text-primary">5 / 10</span>
+                        </label>
+                        <input type="range" class="form-range" min="1" max="10" step="1" id="well_sleep" value="5">
+                        <div class="d-flex justify-content-between text-muted" style="font-size: 0.75rem;">
+                            <span>Exhausted</span>
+                            <span>Well Rested</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="well_stress" class="form-label d-flex justify-content-between text-muted fw-bold small">
+                            <span><i class="bi bi-lightning-charge me-1"></i> Stress Level</span>
+                            <span id="val_stress" class="text-danger">5 / 10</span>
+                        </label>
+                        <input type="range" class="form-range" min="1" max="10" step="1" id="well_stress" value="5">
+                        <div class="d-flex justify-content-between text-muted" style="font-size: 0.75rem;">
+                            <span>Very Low</span>
+                            <span>Overwhelming</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="well_mood" class="form-label d-flex justify-content-between text-muted fw-bold small">
+                            <span><i class="bi bi-heart me-1"></i> Overall Mood</span>
+                            <span id="val_mood" class="text-success">5 / 10</span>
+                        </label>
+                        <input type="range" class="form-range" min="1" max="10" step="1" id="well_mood" value="5">
+                        <div class="d-flex justify-content-between text-muted" style="font-size: 0.75rem;">
+                            <span>Feeling Down</span>
+                            <span>Excellent</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-warning w-100 py-3 fs-5 fw-bold text-dark shadow-sm" style="border-radius: 12px;">
+                        Analyze Wellness
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-5">
+            <div class="mt-card border-0 shadow-sm p-4 h-100 d-flex flex-column justify-content-center text-center text-muted" id="well_result_empty">
+                <i class="bi bi-cup-hot display-1 opacity-25 mb-3"></i>
+                <h5 class="fw-bold">Take a breath.</h5>
+                <p class="small">Adjust the sliders to reflect your current state and receive personalized campus wellness advice.</p>
+            </div>
+
+            <div class="mt-card border-0 shadow-lg p-4 h-100 text-center d-none" id="well_result_card">
+                <p class="text-muted fw-bold text-uppercase tracking-wide mb-2">Wellness Status</p>
+                
+                <div class="display-1 mb-2" id="well_emoji_display">😊</div>
+                <h3 class="fw-bolder mb-3" id="well_status_display">Balanced</h3>
+                
+                <div class="p-3 rounded-3 bg-light mt-2 text-start mb-4">
+                    <p class="text-dark fw-medium mb-0 small" id="well_advice_text">Advice goes here.</p>
+                </div>
+
+                <div class="mt-auto">
+                    <button class="btn btn-outline-secondary w-100 fw-bold border-2" id="btn_save_wellness">
+                        <i class="bi bi-cloud-arrow-up me-2"></i> Save Check-in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
